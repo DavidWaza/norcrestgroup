@@ -155,13 +155,24 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-[88rem] px-6 pb-24 lg:px-12">
           <h1 className="max-w-5xl font-head text-5xl leading-[1.02] tracking-[-0.02em] md:text-7xl lg:text-[6.75rem]">
-            Infrastructure and procurement for Nigeria&apos;s federal
-            government.
+            <span className="md:hidden">
+              Infrastructure for Nigeria&apos;s federal government.
+            </span>
+            <span className="hidden md:inline">
+              Infrastructure and procurement for Nigeria&apos;s federal
+              government.
+            </span>
           </h1>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-fg/80">
-            Norcrest Group is a US contractor delivering civil works, sourcing,
-            and program management to Nigerian MDAs — from Houston, Texas and
-            Abuja, FCT.
+            <span className="md:hidden">
+              A US contractor delivering civil works, sourcing, and program
+              management to Nigerian MDAs.
+            </span>
+            <span className="hidden md:inline">
+              Norcrest Group is a US contractor delivering civil works,
+              sourcing, and program management to Nigerian MDAs — from Houston,
+              Texas and Abuja, FCT.
+            </span>
           </p>
           <a href="#projects" className="cta-link mt-10 text-sm">
             See our projects <span className="arrow">→</span>
@@ -174,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* ========== WHO WE ARE ========== */}
-      <section id="who-we-are" className="sec-light scroll-mt-20 pt-40 pb-24">
+      <section id="who-we-are" className="sec-light scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
@@ -219,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* ========== FEATURED STORIES ========== */}
-      <section id="featured" className="scroll-mt-20 pt-40 pb-24">
+      <section id="featured" className="scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="flex items-end justify-between">
             <div>
@@ -274,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* ========== SERVICES ========== */}
-      <section id="services" className="sec-light scroll-mt-20 pt-40 pb-24">
+      <section id="services" className="sec-light scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <Reveal>
             <p className="text-[11px] uppercase tracking-[0.12em] text-mut">
@@ -334,7 +345,7 @@ export default function Home() {
       </section>
 
       {/* ========== WORKING WITH GOVERNMENT ========== */}
-      <section id="government" className="scroll-mt-20 pt-40 pb-24">
+      <section id="government" className="scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[1fr_2fr]">
             <div>
@@ -384,7 +395,7 @@ export default function Home() {
       </section>
 
       {/* ========== PROJECTS ========== */}
-      <section id="projects" className="sec-light scroll-mt-20 pt-40 pb-24">
+      <section id="projects" className="sec-light scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <Reveal>
             <p className="text-[11px] uppercase tracking-[0.12em] text-mut">
@@ -435,7 +446,7 @@ export default function Home() {
       </section>
 
       {/* ========== NEWSROOM ========== */}
-      <section id="newsroom" className="scroll-mt-20 pt-40 pb-24">
+      <section id="newsroom" className="scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[1fr_2fr]">
             <div>
@@ -480,7 +491,7 @@ export default function Home() {
       </section>
 
       {/* ========== CAREERS ========== */}
-      <section id="careers" className="sec-light scroll-mt-20 pt-40 pb-24">
+      <section id="careers" className="sec-light scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
@@ -519,7 +530,7 @@ export default function Home() {
       </section>
 
       {/* ========== COMPLIANCE ========== */}
-      <section id="compliance" className="scroll-mt-20 pt-40 pb-24">
+      <section id="compliance" className="scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
@@ -580,7 +591,7 @@ export default function Home() {
       </section>
 
       {/* ========== CONTACT ========== */}
-      <section id="contact" className="sec-light scroll-mt-20 pt-40 pb-24">
+      <section id="contact" className="sec-light scroll-mt-20 py-15">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>

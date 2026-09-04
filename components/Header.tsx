@@ -54,7 +54,7 @@ export default function Header() {
         }`}
       >
         <div
-          className={`border-b border-rule transition-opacity duration-300 ${
+          className={`hidden border-b border-rule transition-opacity duration-300 md:block ${
             open ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
