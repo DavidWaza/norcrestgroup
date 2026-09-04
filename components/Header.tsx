@@ -54,7 +54,7 @@ export default function Header() {
         }`}
       >
         <div
-          className={`border-b border-white/15 transition-opacity duration-300 ${
+          className={`border-b border-rule transition-opacity duration-300 ${
             open ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
@@ -112,7 +112,7 @@ export default function Header() {
         }`}
       >
         <div className="mx-auto grid h-full max-w-[88rem] grid-cols-1 px-6 pt-28 pb-12 lg:grid-cols-[2fr_3fr] lg:px-12">
-          <div className="relative hidden border-r border-white/15 pr-12 lg:block">
+          <div className="relative hidden border-r border-rule pr-12 lg:block">
             <div className="img-zoom h-full">
               {/* eslint-disable-next-line @next/next/no-img-element -- full-bleed art direction */}
               <img
@@ -125,7 +125,7 @@ export default function Header() {
           <nav className="flex flex-col justify-between lg:pl-16">
             <ul>
               {MENU_LINKS.map((link) => (
-                <li key={link.label} className="border-b border-white/15">
+                <li key={link.label} className="border-b border-rule">
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}

@@ -174,7 +174,7 @@ export default function Home() {
       </section>
 
       {/* ========== WHO WE ARE ========== */}
-      <section id="who-we-are" className="scroll-mt-20 pt-40 pb-24">
+      <section id="who-we-are" className="sec-light scroll-mt-20 pt-40 pb-24">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
@@ -207,7 +207,7 @@ export default function Home() {
                 </div>
               </Reveal>
             </div>
-            <Reveal delay={0.24} className="lg:border-l lg:border-white/15 lg:pl-16">
+            <Reveal delay={0.24} className="lg:border-l lg:border-rule lg:pl-16">
               <Photo
                 ratio="4/5"
                 src="/media/site-crew.jpg"
@@ -241,7 +241,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-20 grid gap-12 border-t border-white/15 pt-12 md:grid-cols-[5fr_4fr_4fr] md:gap-0 md:divide-x md:divide-white/15">
+          <div className="mt-20 grid gap-12 border-t border-rule pt-12 md:grid-cols-[5fr_4fr_4fr] md:gap-0 md:divide-x md:divide-rule">
             {STORIES.map((story, i) => (
               <Reveal
                 key={story.title}
@@ -274,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* ========== SERVICES ========== */}
-      <section id="services" className="scroll-mt-20 pt-40 pb-24">
+      <section id="services" className="sec-light scroll-mt-20 pt-40 pb-24">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <Reveal>
             <p className="text-[11px] uppercase tracking-[0.12em] text-mut">
@@ -290,7 +290,7 @@ export default function Home() {
           <div className="mt-20">
             {SERVICES.map((service, i) => (
               <Reveal key={service.num} delay={i * 0.08}>
-                <div className="grid gap-4 border-t border-white/15 py-10 md:grid-cols-12 md:gap-8">
+                <div className="grid gap-4 border-t border-rule py-10 md:grid-cols-12 md:gap-8">
                   <p className="text-sm text-mut md:col-span-1">
                     {service.num}
                   </p>
@@ -303,11 +303,11 @@ export default function Home() {
                 </div>
               </Reveal>
             ))}
-            <div className="border-t border-white/15" />
+            <div className="border-t border-rule" />
           </div>
 
           {/* photo strip: mixed aspect ratios, thin vertical rules */}
-          <div className="mt-24 grid md:grid-cols-[4fr_5fr_3fr] md:divide-x md:divide-white/15">
+          <div className="mt-24 grid md:grid-cols-[4fr_5fr_3fr] md:divide-x md:divide-rule">
             <Reveal className="md:pr-8">
               <Photo
                 ratio="4/5"
@@ -364,10 +364,10 @@ export default function Home() {
               </Reveal>
             </div>
 
-            <div className="lg:border-l lg:border-white/15 lg:pl-16">
+            <div className="lg:border-l lg:border-rule lg:pl-16">
               {GOVERNMENT.map((item, i) => (
                 <Reveal key={item.num} delay={i * 0.08}>
-                  <div className="border-t border-white/15 py-12 first:border-t-0 first:pt-0">
+                  <div className="border-t border-rule py-12 first:border-t-0 first:pt-0">
                     <p className="text-sm text-mut">{item.num}</p>
                     <h3 className="mt-4 font-head text-2xl tracking-[-0.02em] lg:text-3xl">
                       {item.title}
@@ -384,7 +384,7 @@ export default function Home() {
       </section>
 
       {/* ========== PROJECTS ========== */}
-      <section id="projects" className="scroll-mt-20 pt-40 pb-24">
+      <section id="projects" className="sec-light scroll-mt-20 pt-40 pb-24">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <Reveal>
             <p className="text-[11px] uppercase tracking-[0.12em] text-mut">
@@ -398,7 +398,7 @@ export default function Home() {
           </Reveal>
 
           <div className="mt-20">
-            <div className="hidden grid-cols-[3fr_2fr_1fr_auto] gap-8 border-b border-white/15 pb-4 md:grid">
+            <div className="hidden grid-cols-[3fr_2fr_1fr_auto] gap-8 border-b border-rule pb-4 md:grid">
               {["Project", "Client", "State", "Year"].map((h) => (
                 <p
                   key={h}
@@ -410,7 +410,7 @@ export default function Home() {
             </div>
             {PROJECTS.map((row, i) => (
               <Reveal key={row.project} delay={i * 0.08}>
-                <div className="grid gap-2 border-b border-white/15 py-7 md:grid-cols-[3fr_2fr_1fr_auto] md:gap-8">
+                <div className="grid gap-2 border-b border-rule py-7 md:grid-cols-[3fr_2fr_1fr_auto] md:gap-8">
                   <p className="text-base leading-snug">{row.project}</p>
                   <p className="text-sm text-fg/70 md:self-center">
                     {row.client}
@@ -455,12 +455,12 @@ export default function Home() {
                 </a>
               </Reveal>
             </div>
-            <div className="lg:border-l lg:border-white/15 lg:pl-16">
+            <div className="lg:border-l lg:border-rule lg:pl-16">
               {NEWS.map((item, i) => (
                 <Reveal key={item.title} delay={i * 0.08}>
                   <a
                     href="#contact"
-                    className="group grid gap-2 border-b border-white/15 py-7 first:border-t md:grid-cols-[auto_1fr] md:gap-10"
+                    className="group grid gap-2 border-b border-rule py-7 first:border-t md:grid-cols-[auto_1fr] md:gap-10"
                   >
                     <div className="flex gap-6 md:w-40 md:flex-col md:gap-1">
                       <p className="text-xs text-mut">{item.date}</p>
@@ -480,7 +480,7 @@ export default function Home() {
       </section>
 
       {/* ========== CAREERS ========== */}
-      <section id="careers" className="scroll-mt-20 pt-40 pb-24">
+      <section id="careers" className="sec-light scroll-mt-20 pt-40 pb-24">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
@@ -507,7 +507,7 @@ export default function Home() {
                 </a>
               </Reveal>
             </div>
-            <Reveal delay={0.16} className="hidden lg:block lg:border-l lg:border-white/15 lg:pl-16">
+            <Reveal delay={0.16} className="hidden lg:block lg:border-l lg:border-rule lg:pl-16">
               <Photo
                 ratio="4/5"
                 src="/media/office.jpg"
@@ -558,7 +558,7 @@ export default function Home() {
               </Reveal>
             </div>
 
-            <div className="lg:border-l lg:border-white/15 lg:pl-16">
+            <div className="lg:border-l lg:border-rule lg:pl-16">
               <Reveal delay={0.16}>
                 <h3 className="text-[11px] uppercase tracking-[0.12em] text-mut">
                   Registrations
@@ -567,7 +567,7 @@ export default function Home() {
                   {REGISTRATIONS.map((item) => (
                     <li
                       key={item}
-                      className="border-b border-white/15 py-4 text-sm leading-relaxed text-fg/70"
+                      className="border-b border-rule py-4 text-sm leading-relaxed text-fg/70"
                     >
                       {item}
                     </li>
@@ -580,7 +580,7 @@ export default function Home() {
       </section>
 
       {/* ========== CONTACT ========== */}
-      <section id="contact" className="scroll-mt-20 pt-40 pb-24">
+      <section id="contact" className="sec-light scroll-mt-20 pt-40 pb-24">
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
@@ -605,7 +605,7 @@ export default function Home() {
                 <div className="mt-12 flex flex-wrap items-center gap-10">
                   <a
                     href="mailto:bd@norcrestgroup.com?subject=Capability%20statement%20request"
-                    className="bg-fg px-8 py-4 text-xs uppercase tracking-[0.12em] text-ink transition-colors hover:bg-fg/85"
+                    className="bg-fg px-8 py-4 text-xs uppercase tracking-[0.12em] text-canvas transition-colors hover:bg-fg/85"
                   >
                     Request a capability statement
                   </a>
@@ -615,7 +615,7 @@ export default function Home() {
                 </div>
               </Reveal>
             </div>
-            <Reveal delay={0.24} className="hidden lg:block lg:border-l lg:border-white/15 lg:pl-16">
+            <Reveal delay={0.24} className="hidden lg:block lg:border-l lg:border-rule lg:pl-16">
               <Photo
                 ratio="1/1"
                 src="/media/drafting.jpg"
@@ -626,7 +626,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="pt-16" />
       <Footer />
       <CookieBar />
     </div>

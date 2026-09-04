@@ -32,7 +32,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/15">
+    <footer className="border-t border-rule">
       <div className="mx-auto max-w-[88rem] px-6 pt-24 pb-12 lg:px-12">
         <div className="mb-16 flex items-center gap-3">
           <Logo className="h-9 w-9" />
@@ -63,7 +63,7 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="grid gap-12 sm:grid-cols-2 lg:border-l lg:border-white/15 lg:pl-16">
+          <div className="grid gap-12 sm:grid-cols-2 lg:border-l lg:border-rule lg:pl-16">
             <div>
               <h3 className="text-[11px] uppercase tracking-[0.12em] text-mut">
                 Headquarters
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col gap-4 border-t border-white/15 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-20 flex flex-col gap-4 border-t border-rule pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-mut">
             © {new Date().getFullYear()} Norcrest Group LLC. All rights
             reserved.
