@@ -3,6 +3,13 @@ import Reveal from "@/components/Reveal";
 import Photo from "@/components/Photo";
 import Footer from "@/components/Footer";
 import CookieBar from "@/components/CookieBar";
+import Icon from "@/components/Icon";
+import {
+  BridgeLines,
+  TowerLines,
+  ContourLines,
+  MarkLines,
+} from "@/components/Backdrop";
 
 const STORIES = [
   {
@@ -56,21 +63,25 @@ const NEWS = [
 const SERVICES = [
   {
     num: "01",
+    icon: "civil",
     title: "Infrastructure & civil works",
     body: "Roads, drainage, water systems, and power distribution. Design review, construction, and site supervision to Federal Ministry of Works and NERC standards.",
   },
   {
     num: "02",
+    icon: "procurement",
     title: "Procurement & logistics",
     body: "US and international sourcing under a documented export compliance program. Ocean and air freight into Lagos and Onne, customs clearance, and delivery to site.",
   },
   {
     num: "03",
+    icon: "engineering",
     title: "Engineering & technical services",
     body: "Substation and solar-hybrid mini-grid engineering, metering, water treatment, and commissioning. Operations and maintenance with Nigerian technical teams.",
   },
   {
     num: "04",
+    icon: "advisory",
     title: "Program management & advisory",
     body: "Owner's engineer services, contract administration, and monitoring and evaluation for MDA and multilateral-funded programs.",
   },
@@ -79,21 +90,25 @@ const SERVICES = [
 const GOVERNMENT = [
   {
     num: "01",
+    icon: "tender",
     title: "Tendering and due process",
     body: "We respond to open competitive and selective tenders under the Public Procurement Act 2007. Technical and financial submissions are prepared to BPP format, and we support due process certification from award through close-out.",
   },
   {
     num: "02",
+    icon: "incountry",
     title: "In-country delivery",
     body: "Our CAC-registered subsidiary in Abuja holds the local contracts, employs Nigerian engineers, and manages site works directly. Delivery is not subcontracted to a firm you have never met.",
   },
   {
     num: "03",
+    icon: "customs",
     title: "Customs and logistics",
     body: "We manage Form M processing, PAAR, SONCAP certification, duty exemptions where applicable, and bonded transport from port to site. Equipment arrives cleared, insured, and on program.",
   },
   {
     num: "04",
+    icon: "payment",
     title: "Payment structures",
     body: "We work with confirmed letters of credit through correspondent banks, milestone billing certified by the supervising MDA, and advance payment guarantees issued by Nigerian banks.",
   },
@@ -185,7 +200,11 @@ export default function Home() {
       </section>
 
       {/* ========== WHO WE ARE ========== */}
-      <section id="who-we-are" className="sec-light scroll-mt-20 py-15">
+      <section
+        id="who-we-are"
+        className="sec-light relative isolate scroll-mt-20 overflow-hidden py-15"
+      >
+        <BridgeLines className="pointer-events-none absolute right-0 bottom-0 -z-10 w-[72%] max-w-4xl opacity-[0.07]" />
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
@@ -305,7 +324,8 @@ export default function Home() {
                   <p className="text-sm text-mut md:col-span-1">
                     {service.num}
                   </p>
-                  <h3 className="font-head text-2xl tracking-[-0.02em] md:col-span-5 lg:text-3xl">
+                  <h3 className="flex items-start gap-4 font-head text-2xl tracking-[-0.02em] md:col-span-5 lg:text-3xl">
+                    <Icon name={service.icon} className="mt-1 h-7 w-7 shrink-0 text-mut" />
                     {service.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-fg/70 md:col-span-5 md:col-start-8">
@@ -345,7 +365,11 @@ export default function Home() {
       </section>
 
       {/* ========== WORKING WITH GOVERNMENT ========== */}
-      <section id="government" className="scroll-mt-20 py-15">
+      <section
+        id="government"
+        className="relative isolate scroll-mt-20 overflow-hidden py-15"
+      >
+        <TowerLines className="pointer-events-none absolute right-0 top-0 -z-10 h-full max-h-[640px] opacity-[0.06]" />
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[1fr_2fr]">
             <div>
@@ -379,7 +403,10 @@ export default function Home() {
               {GOVERNMENT.map((item, i) => (
                 <Reveal key={item.num} delay={i * 0.08}>
                   <div className="border-t border-rule py-12 first:border-t-0 first:pt-0">
-                    <p className="text-sm text-mut">{item.num}</p>
+                    <div className="flex items-center justify-between">
+                      <p className="text-sm text-mut">{item.num}</p>
+                      <Icon name={item.icon} className="h-7 w-7 text-mut" />
+                    </div>
                     <h3 className="mt-4 font-head text-2xl tracking-[-0.02em] lg:text-3xl">
                       {item.title}
                     </h3>
@@ -395,7 +422,11 @@ export default function Home() {
       </section>
 
       {/* ========== PROJECTS ========== */}
-      <section id="projects" className="sec-light scroll-mt-20 py-15">
+      <section
+        id="projects"
+        className="sec-light relative isolate scroll-mt-20 overflow-hidden py-15"
+      >
+        <ContourLines className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 w-full opacity-[0.07]" />
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <Reveal>
             <p className="text-[11px] uppercase tracking-[0.12em] text-mut">
@@ -578,8 +609,9 @@ export default function Home() {
                   {REGISTRATIONS.map((item) => (
                     <li
                       key={item}
-                      className="border-b border-rule py-4 text-sm leading-relaxed text-fg/70"
+                      className="flex items-start gap-3 border-b border-rule py-4 text-sm leading-relaxed text-fg/70"
                     >
+                      <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                       {item}
                     </li>
                   ))}
@@ -591,7 +623,11 @@ export default function Home() {
       </section>
 
       {/* ========== CONTACT ========== */}
-      <section id="contact" className="sec-light scroll-mt-20 py-15">
+      <section
+        id="contact"
+        className="sec-light relative isolate scroll-mt-20 overflow-hidden py-15"
+      >
+        <MarkLines className="pointer-events-none absolute -right-16 top-1/2 -z-10 h-[420px] -translate-y-1/2 opacity-[0.06]" />
         <div className="mx-auto max-w-[88rem] px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[2fr_1fr]">
             <div>
